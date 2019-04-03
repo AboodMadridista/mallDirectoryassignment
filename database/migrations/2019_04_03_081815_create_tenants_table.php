@@ -14,6 +14,7 @@ class CreateTenantsTable extends Migration
     public function up()
     {
         Schema::create('tenants', function (Blueprint $table) {
+            $table ->engine = 'tenant';
             $table->increments('id');
             $table->String('name',40);
             $table->string('LotNo',10)->index();
